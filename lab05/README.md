@@ -8,14 +8,14 @@
 
 Escreva em Cypher uma consulta que retorne os marcadores da categoria `Serviços`, sem considerar as categorias subordinadas.
 ~~~
-Qualquer coisa
+MATCH (m:Marcador)
+MATCH (c:Categoria)
+RETURN (m)-[:Pertence]->(:Categoria{id:"Serviços"})
 ~~~
 
 ## Tarefa 2
 
 Escreva em Cypher uma consulta que retorne os marcadores da categoria `Serviços`, considerando as categorias subordinadas.
 ~~~
-Qualquer coisa
+...
 ~~~
-
-Veja template para submissão desta tarefa na pasta `/templates/2021/lab05`.
